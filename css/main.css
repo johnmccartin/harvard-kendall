@@ -1,0 +1,532 @@
+/*
+      ___           ___       ___       ___           ___     
+     /\  \         /\__\     /\__\     /\  \         |\__\    
+    /::\  \       /:/  /    /:/  /    /::\  \        |:|  |   
+   /:/\:\  \     /:/  /    /:/  /    /:/\:\  \       |:|  |   
+  /::\~\:\  \   /:/  /    /:/  /    /::\~\:\  \      |:|__|__ 
+ /:/\:\ \:\__\ /:/__/    /:/__/    /:/\:\ \:\__\     /::::\__\
+ \/__\:\/:/  / \:\  \    \:\  \    \:\~\:\ \/__/    /:/~~/~   
+      \::/  /   \:\  \    \:\  \    \:\ \:\__\     /:/  /     
+      /:/  /     \:\  \    \:\  \    \:\ \/__/     \/__/      
+     /:/  /       \:\__\    \:\__\    \:\__\                  
+     \/__/         \/__/     \/__/     \/__/                  
+     
+      ___           ___           ___           ___           ___     
+     /\__\         /\  \         /\__\         /\  \         /\  \    
+    /:/  /        /::\  \       /:/  /        /::\  \       /::\  \   
+   /:/__/        /:/\:\  \     /:/  /        /:/\ \  \     /:/\:\  \  
+  /::\  \ ___   /:/  \:\  \   /:/  /  ___   _\:\~\ \  \   /::\~\:\  \ 
+ /:/\:\  /\__\ /:/__/ \:\__\ /:/__/  /\__\ /\ \:\ \ \__\ /:/\:\ \:\__\
+ \/__\:\/:/  / \:\  \ /:/  / \:\  \ /:/  / \:\ \:\ \/__/ \:\~\:\ \/__/
+      \::/  /   \:\  /:/  /   \:\  /:/  /   \:\ \:\__\    \:\ \:\__\  
+      /:/  /     \:\/:/  /     \:\/:/  /     \:\/:/  /     \:\ \/__/  
+     /:/  /       \::/  /       \::/  /       \::/  /       \:\__\    
+     \/__/         \/__/         \/__/         \/__/         \/__/    
+
+
+http://www.alleyhouseestudio.com
+
+
+
+
+My simplistic attempts at
+												  
+	  _|_|      _|_|      _|_|_|    _|_|_|    _|_|_|  
+	_|    _|  _|    _|  _|        _|        _|        
+	_|    _|  _|    _|  _|          _|_|      _|_|    
+	_|    _|  _|    _|  _|              _|        _|  
+	  _|_|      _|_|      _|_|_|  _|_|_|    _|_|_|   
+			  
+breaking from that model for where need be.
+                                                 
+    
+    
+
+  /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+
+
+		
+
+		** Dependencies: Pure CSS (responsive rollup) http://purecss.io/
+		
+
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+
+
+
+                _       _     _           
+__   ____ _ _ __(_) __ _| |__ | | ___  ___ 
+\ \ / / _` | '__| |/ _` | '_ \| |/ _ \/ __|
+ \ V / (_| | |  | | (_| | |_) | |  __/\__ \
+  \_/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
+
+*/
+/*
+
+ _                            _       
+(_)_ __ ___  _ __   ___  _ __| |_ ___ 
+| | '_ ` _ \| '_ \ / _ \| '__| __/ __|
+| | | | | | | |_) | (_) | |  | |_\__ \
+|_|_| |_| |_| .__/ \___/|_|   \__|___/
+            |_|                       
+*/
+.border {
+  border-color: #666666 !important;
+}
+
+.border-mid {
+  border-color: #dddddd !important;
+}
+
+.border-1 {
+  border: 1px solid;
+}
+
+.border-2 {
+  border: 2px solid;
+}
+
+.border-4 {
+  border: 4px solid;
+}
+
+.border-top-1 {
+  border-top: 1px solid;
+}
+
+.border-top-2 {
+  border-top: 2px solid;
+}
+
+.border-top-4 {
+  border-top: 4px solid;
+}
+
+.border-bottom-1 {
+  border-bottom: 1px solid;
+}
+
+.border-bottom-2 {
+  border-bottom: 2px solid;
+}
+
+.border-bottom-4 {
+  border-bottom: 4px solid;
+}
+
+.border-left-1 {
+  border-left: 1px solid;
+}
+
+.border-left-2 {
+  border-left: 2px solid;
+}
+
+.border-left-4 {
+  border-left: 4px solid;
+}
+
+.border-right-1 {
+  border-right: 1px solid;
+}
+
+.border-right-2 {
+  border-right: 2px solid;
+}
+
+.border-right-4 {
+  border-right: 4px solid;
+}
+
+.pure-menu {
+  list-style: none;
+}
+
+.dark {
+  background: #222222;
+  color: white;
+}
+.dark .border {
+  border-color: white;
+}
+.dark .pure-menu.pure-menu-open, .dark .pure-menu.pure-menu-horizontal li .pure-menu-children {
+  background: transparent;
+  border: 0px;
+}
+.dark .pure-menu a, .dark .pure-menu .pure-menu-can-have-children > li:after {
+  color: white;
+}
+.dark .pure-menu li a {
+  padding: 5px 0px;
+}
+.dark .pure-menu li a:hover, .dark .pure-menu li a:focus {
+  color: #dddddd;
+}
+.dark .pure-menu .sub-menu a {
+  color: white;
+  padding-left: 1em;
+}
+.dark .pure-menu .sub-menu li:hover > a {
+  color: #dddddd;
+}
+.dark a {
+  color: white;
+}
+.dark a:hover {
+  color: #dddddd;
+}
+
+.brand-title.dark {
+  background: #00a86b;
+}
+
+.debug {
+  border: 1px solid;
+}
+
+.debug-purple {
+  background: purple;
+}
+
+.debug-lime {
+  background: lime;
+}
+
+.nav-menu {
+  background: #666666;
+}
+
+.pure-menu ul {
+  visibility: visible;
+  top: auto;
+  left: auto;
+  position: relative;
+}
+
+.pure-menu.pure-menu-open, .pure-menu.pure-menu-horizontal li .pure-menu-children {
+  background: transparent;
+  border: 0px;
+}
+
+.pure-menu a, .pure-menu .pure-menu-can-have-children > li:after {
+  color: #222222;
+}
+
+.pure-menu li a {
+  padding: 5px 0px;
+}
+
+.pure-menu li a:hover, .pure-menu li a:focus {
+  color: #222222;
+  background: #00a86b;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.margin-1 {
+  margin: 1em;
+}
+
+.margin-2 {
+  margin: 2em;
+}
+
+.margin-4 {
+  margin: 4em;
+}
+
+.margin-top-1 {
+  margin-top: 1em;
+}
+
+.margin-top-2 {
+  margin-top: 2em;
+}
+
+.margin-top-4 {
+  margin-top: 4em;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 1em;
+}
+
+.margin-bottom-2 {
+  margin-bottom: 2em;
+}
+
+.margin-bottom-4 {
+  margin-bottom: 4em;
+}
+
+.margin-right-1 {
+  margin-right: 1em;
+}
+
+.margin-right-2 {
+  margin-right: 2em;
+}
+
+.margin-right-4 {
+  margin-right: 4em;
+}
+
+.margin-left-1 {
+  margin-left: 1em;
+}
+
+.margin-left-2 {
+  margin-left: 2em;
+}
+
+.margin-left-4 {
+  margin-left: 4em;
+}
+
+.padding-1 {
+  padding: 1em;
+}
+
+.padding-2 {
+  padding: 2em;
+}
+
+.padding-4 {
+  padding: 4em;
+}
+
+.padding-top-1 {
+  padding-top: 1em;
+}
+
+.padding-top-2 {
+  padding-top: 2em;
+}
+
+.padding-top-4 {
+  padding-top: 4em;
+}
+
+.padding-bottom-1 {
+  padding-bottom: 1em;
+}
+
+.padding-bottom-2 {
+  padding-bottom: 2em;
+}
+
+.padding-bottom-4 {
+  padding-bottom: 4em;
+}
+
+.padding-right-1 {
+  padding-right: 1em;
+}
+
+.padding-right-2 {
+  padding-right: 2em;
+}
+
+.padding-right-4 {
+  padding-right: 4em;
+}
+
+.padding-left-1 {
+  padding-left: 1em;
+}
+
+.padding-left-2 {
+  padding-left: 2em;
+}
+
+.padding-left-4 {
+  padding-left: 4em;
+}
+
+.pull-down {
+  bottom: 0;
+}
+
+.pull-right {
+  float: right;
+  right: 0;
+}
+
+.pull-left {
+  float: left;
+}
+
+.stretch-lr {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.stretch-all {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.fixed {
+  position: fixed !important;
+}
+
+.static {
+  position: static !important;
+}
+
+.relative {
+  position: relative !important;
+}
+
+.absolute {
+  position: absolute !important;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 48em) {
+  .nav-menu {
+    background: transparent;
+  }
+
+  .md-pull-down {
+    bottom: 0;
+  }
+
+  .header {
+    position: fixed;
+  }
+}
+.text-centered {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/*zs*/
+.top {
+  z-index: 99999;
+}
+
+.bottom {
+  z-index: -99999;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background: white;
+}
+
+html, button, input, select, textarea,
+.pure-g [class*="pure-u"] {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+}
+
+::selection {
+  background: #00a86b;
+  color: white;
+}
+
+::-moz-selection {
+  background: #00a86b;
+  color: white;
+}
+
+body {
+  color: #222222;
+}
+
+a {
+  color: #00a86b;
+}
+
+a:hover {
+  background: #00a86b;
+  color: white;
+}
+
+.link-on-dark {
+  color: white;
+}
+
+.link-no-decor {
+  text-decoration: none;
+}
+
+.pure-g > div, body div {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.layout {
+  position: relative;
+  width: 100%;
+}
+.layout img {
+  width: 100%;
+}
+
+.inner {
+  width: auto;
+  padding: 1em;
+}
+
+.reader {
+  width: 100%;
+  max-width: 600px;
+  font-size: 1.2em;
+}
+
+.ptitle {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+.recent-heading {
+  font-size: 1.2em;
+  font-weight: 100;
+}

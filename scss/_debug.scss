@@ -1,0 +1,17 @@
+
+@mixin bordered {
+ border: 1px solid;
+ }
+
+.debug {
+	@include bordered;
+}
+
+.debug-purple {
+  background: purple;
+}
+
+.debug-lime {
+  background: lime;
+}
+
