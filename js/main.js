@@ -174,7 +174,7 @@ function chartist(){
 			  .attr("y", 6)
 			  .attr("dy", ".71em")
 			  .style("text-anchor", "end")
-			  .text("Hubway Returns to Harvard Stations");
+			  .text("Hubway Returns to Harvard");
 			  
 		var lines = h_chart.selectAll(".line")
 			.data(all)
@@ -245,7 +245,7 @@ function chartist(){
 			  .attr("y", 6)
 			  .attr("dy", ".71em")
 			  .style("text-anchor", "end")
-			  .text("Hubway Returns to Kendall Stations");
+			  .text("Hubway Returns to Kendall");
 			  
 		var lines = k_chart.selectAll(".line")
 			.data(all)
