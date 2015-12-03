@@ -12,12 +12,17 @@
 
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 
+
+
         <!--[if lte IE 8]>
             <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
         <![endif]-->
         <!--[if gt IE 8]><!-->
             <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
         <!--<![endif]-->
+
+        <script src="https://use.typekit.net/iyx1vuc.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 
         <link rel="stylesheet" href="css/main.css">
@@ -33,46 +38,231 @@
 
         <div class="layout">
 
-            <div class="header">
-                
+            <div class="about top">
+                <div class="btn about-unreveal pull-right pull-up margin-top-2 margin-right-2">
+                    
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="94.926px" height="94.926px" viewBox="0 0 94.926 94.926" style="enable-background:new 0 0 94.926 94.926;"
+                     xml:space="preserve">
+                    <g>
+                    <path d="M55.931,47.463L94.306,9.09c0.826-0.827,0.826-2.167,0-2.994L88.833,0.62C88.436,0.224,87.896,0,87.335,0
+                        c-0.562,0-1.101,0.224-1.498,0.62L47.463,38.994L9.089,0.62c-0.795-0.795-2.202-0.794-2.995,0L0.622,6.096
+                        c-0.827,0.827-0.827,2.167,0,2.994l38.374,38.373L0.622,85.836c-0.827,0.827-0.827,2.167,0,2.994l5.473,5.476
+                        c0.397,0.396,0.936,0.62,1.498,0.62s1.1-0.224,1.497-0.62l38.374-38.374l38.374,38.374c0.397,0.396,0.937,0.62,1.498,0.62
+                        s1.101-0.224,1.498-0.62l5.473-5.476c0.826-0.827,0.826-2.167,0-2.994L55.931,47.463z"/>
+                    </g>
+                </svg>
+                </div>
+
+                <div class="reader">
+                    
+                    <h1>Students vs.<br /> Office Workers</h1>
+                    <h4>1  |  Introduction</h4>
+                    <p>
+                   Harvard Square and Kendall Square are two popular destinations which attract a lot of people every day, yet they largely serve two distinct populations: students (+ tourists) and office workers. Thus, in each square we find a different pattern of Hubway arrivals, café concentration, and rental housing pricing. High numbers of food establishments, particularly cafés agglomerate there, serving for these potential guests. Here we show the change of Hubway return numbers through a day, café density, and rental price per square foot for apartments.</p>
+
+                   <p> Harvard Square mainly serves students and tourists while Kendall Square attracts office workers. Watch as office workers flood Kendall Square in the morning on Hubway, get coffee at dispersed locations throughout the square, and pay top dollar for relatively few apartments. The converse is true of Harvard, with more temporally dispersed Hubway returns, smaller pockets of higher café concentration, and a greater number of lower-priced rental units.
+                   </p>
+                    <br />
+                    <h4>2  |  Datasets:</h4>
+                    <ul>
+                        <li>Hubway Arrivals by Hour (trips with end station in the given square, weighted to equalize weekdays and weekends)</li>
+                        <li>GooglePlaces cafés (including “café,” “food,” and “restaurant”)</li>
+                        <li>Zillow Apartments currently for rent: price per square foot</li>
+                    </ul>
+                    
+                    <br />
+                    <h4>3  |  IRL:</h4>
+                    <h4>Harvard Square</h4>
+                    <img src="./img/harvard.jpg" />
+                    <small><a href='http://media.news.harvard.edu/gazette/wp-content/uploads/2015/04/080812_Hubway_5682_922.jpg'>Source</a></small>
+
+                    <h4>Kendall Square</h4>
+                    <img src="./img/kendall.jpg" />
+                    <small><a href='http://stock.billhorsman.com/Boston/Cambridge/i-DRrVwJj/0/L/13-165-544-L.jpg'>Source</a></small>
+
+
+                </div>
+
             </div>
+
+            <div class="header pull-up pure-g">
+                <div class="pure-u-1-2 title">
+                    <h1>Students vs. Office Workers</h1>
+                    <h2>(measured by Hubway Arrival Time, Apartment Rental Prices, and Café Density)</h2>
+                </div>
+                
+                <div class="pure-u-1-2 menu">
+                
+                    
+
+                    <div class="btn legend-reveal open-legend margin-right-1 pull-right">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                          viewBox="0 0 47 47" style="enable-background:new 0 0 47 47;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M23.5,11.449c-6.385,0-11.563,4.959-11.563,11.077c0,7.265,5.045,9.117,5.045,13.344c0,1.045,0.799,2.017,1.999,2.731
+                                c-0.251,0.209-0.391,0.438-0.391,0.678c0,0.322,0.253,0.623,0.688,0.881c-0.408,0.253-0.645,0.544-0.645,0.855
+                                c0,0.314,0.242,0.608,0.659,0.863c-0.426,0.256-0.674,0.555-0.674,0.872c0,0.388,0.366,0.743,0.978,1.032
+                                c-0.237,0.215-0.373,0.453-0.373,0.703c0,0.74,1.153,1.369,2.774,1.621C22.282,46.634,22.86,47,23.534,47
+                                c0.673,0,1.25-0.363,1.535-0.889c1.637-0.248,2.803-0.881,2.803-1.623c0-0.247-0.131-0.482-0.363-0.694
+                                c0.625-0.291,0.998-0.651,0.998-1.042c0-0.314-0.241-0.609-0.659-0.863c0.425-0.257,0.674-0.554,0.674-0.871
+                                c0-0.322-0.254-0.623-0.688-0.882c0.41-0.252,0.646-0.544,0.646-0.855c0-0.249-0.151-0.484-0.421-0.698
+                                c1.181-0.713,1.966-1.675,1.966-2.711c0-4.229,5.039-6.08,5.039-13.344C35.063,16.408,29.886,11.449,23.5,11.449z M29.538,29.381
+                                c-1.152,1.692-2.455,3.604-2.535,6.232c-0.396,0.441-1.809,1.158-3.499,1.158c-1.691,0-3.105-0.717-3.5-1.16
+                                c-0.08-2.629-1.385-4.541-2.539-6.232c-1.287-1.886-2.502-3.667-2.502-6.854c0-4.439,3.83-8.051,8.537-8.051
+                                c4.708,0,8.538,3.612,8.538,8.051C32.038,25.713,30.823,27.495,29.538,29.381z"/>
+                            <path d="M23.5,7.564c0.832,0,1.513-0.9,1.513-2V2c0-1.1-0.681-2-1.513-2s-1.513,0.9-1.513,2v3.564
+                                C21.987,6.665,22.668,7.564,23.5,7.564z"/>
+                            <path d="M15.747,9.642c0.721-0.416,0.859-1.536,0.31-2.488l-1.781-3.087c-0.55-0.953-1.59-1.392-2.311-0.976
+                                c-0.721,0.416-0.86,1.536-0.311,2.488l1.783,3.087C13.987,9.619,15.026,10.058,15.747,9.642z"/>
+                            <path d="M9.095,13.007L6.01,11.225c-0.953-0.55-2.073-0.411-2.489,0.31c-0.416,0.721,0.022,1.76,0.976,2.31l3.086,1.782
+                                c0.953,0.55,2.073,0.411,2.488-0.31C10.486,14.596,10.048,13.557,9.095,13.007z"/>
+                            <path d="M42.504,32.295l-3.086-1.781c-0.953-0.551-2.073-0.412-2.488,0.31c-0.416,0.721,0.021,1.76,0.977,2.31l3.084,1.782
+                                c0.953,0.55,2.073,0.411,2.489-0.31C43.896,33.884,43.458,32.845,42.504,32.295z"/>
+                            <path d="M7.994,23.07c0-0.833-0.9-1.513-2-1.513H2.43c-1.1,0-2,0.681-2,1.513c0,0.832,0.9,1.513,2,1.513h3.564
+                                C7.094,24.583,7.994,23.902,7.994,23.07z"/>
+                            <path d="M44.57,21.557h-3.563c-1.101,0-2,0.681-2,1.513c0,0.832,0.899,1.513,2,1.513h3.563c1.101,0,2-0.681,2-1.513
+                                C46.57,22.238,45.67,21.557,44.57,21.557z"/>
+                            <path d="M7.582,30.514l-3.086,1.781c-0.953,0.55-1.392,1.589-0.976,2.311c0.416,0.721,1.536,0.859,2.489,0.31l3.085-1.782
+                                c0.953-0.55,1.392-1.589,0.976-2.31C9.655,30.104,8.535,29.963,7.582,30.514z"/>
+                            <path d="M39.418,15.627l3.086-1.782c0.953-0.55,1.392-1.589,0.976-2.31c-0.416-0.721-1.536-0.86-2.489-0.31l-3.085,1.782
+                                c-0.952,0.55-1.392,1.589-0.976,2.31C37.345,16.038,38.465,16.177,39.418,15.627z"/>
+                            <path d="M35.036,3.09c-0.722-0.416-1.762,0.023-2.312,0.976l-1.781,3.087c-0.55,0.953-0.411,2.072,0.31,2.488
+                                c0.722,0.416,1.761-0.023,2.311-0.976l1.783-3.087C35.896,4.626,35.756,3.506,35.036,3.09z"/>
+                        </g>
+                    </g>
+
+                    </svg>
+
+                    </div>
+
+
+                    <div class="btn chart-reveal open-chart margin-right-2 pull-right">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 303.07 303.07" style="enable-background:new 0 0 303.07 303.07;" xml:space="preserve">
+                        <g>
+                            <path d="M277.22,273.07H40.848V15c0-8.284-6.716-15-15-15s-15,6.716-15,15v273.07c0,8.284,6.716,15,15,15H277.22
+                                c8.284,0,15-6.716,15-15C292.22,279.786,285.504,273.07,277.22,273.07z"/>
+                            <path d="M92.313,212.168l33.807-37.141l54.112,71.949c2.846,3.783,7.294,5.984,11.986,5.984c0.35,0,0.701-0.012,1.053-0.037
+                                c5.073-0.355,9.62-3.259,12.079-7.711l85-153.891c4.006-7.251,1.374-16.377-5.878-20.382c-7.25-4.006-16.376-1.374-20.382,5.878
+                                l-73.803,133.617l-51.079-67.916c-2.686-3.571-6.823-5.759-11.286-5.968c-4.477-0.207-8.787,1.581-11.795,4.887l-46,50.534
+                                c-5.576,6.127-5.131,15.614,0.995,21.191C77.249,218.739,86.734,218.295,92.313,212.168z"/>
+                        </g>
+
+                        </svg>
+                    </div><!-- /btn -->
+                    
+                    <h2 class="question about-reveal pull-right margin-right-2">About</h2>
+
+                </div>
+
+                
+            </div> <!-- /header -->
 
             <div class="content">
 
                 <div class="pure-g content-block" id="harvard">
 
-                    <div class="pure-u-1 pure-u-md-2-3 map">
-                        <iframe width="100%" class="carto-db" frameborder="0" src="https://johnmccartin.cartodb.com/viz/1640f114-992d-11e5-8415-0ecd1babdde5/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+                    
+
+                    <div class="pure-u-1 pure-u-md-1-2 map weekday-map">
+                        <h2 class="top-1 callout fixed">Harvard Square</h1>
+                        <h4 class="top-1 callout callout-sub fixed">Weekday</h4>
+                        <iframe width="100%" class="carto-db" frameborder="0" src="https://johnmccartin.cartodb.com/viz/b8273f3c-99c9-11e5-ba9f-0e787de82d45/embed_map?center_lat=42.3734&center_lon=-71.1193&zoom=15" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
                     </div>
 
-                    <div class="pure-u-1 pure-u-md-1-3 debug-purple">
-                        <div class=""></div>
+                    <div class="pure-u-1 pure-u-md-1-2 map weekend-map">
+                        <h2 class="top-1 callout fixed">Harvard Square</h1>
+                        <h4 class="top-1 callout callout-sub fixed">Weekend</h4>
+                        <iframe width="100%" class="carto-db" frameborder="0" src="https://johnmccartin.cartodb.com/viz/b15b6854-99d8-11e5-9c97-0ecfd53eb7d3/embed_map?center_lat=42.3734&center_lon=-71.1193&zoom=15" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
                     </div>
+
+                    
 
                 </div>
 
                 <div class="pure-g content-block" id="kendall">
 
-                    <div class="pure-u-1 pure-u-md-2-3 map">
-                        <iframe width="100%" class="carto-db" frameborder="0" src="https://johnmccartin.cartodb.com/viz/1640f114-992d-11e5-8415-0ecd1babdde5/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+
+                    <div class="pure-u-1 pure-u-md-1-2 map weekday-map">
+                        <h2 class="top-1 callout fixed">Kendall Square</h1>
+                        <h4 class="top-1 callout callout-sub fixed">Weekday</h4>
+                        <iframe width="100%" class="carto-db" frameborder="0" src="https://johnmccartin.cartodb.com/viz/b8273f3c-99c9-11e5-ba9f-0e787de82d45/embed_map?center_lat=42.3623&center_lon=-71.0862&zoom=15" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
                     </div>
 
-                    <div class="pure-u-1 pure-u-md-1-3 debug-lime">
-                        <div class=""></div>
+                    <div class="pure-u-1 pure-u-md-1-2 map weekend-map">
+                        <h2 class="top-1 callout fixed">Kendall Square</h1>
+                        <h4 class="top-1 callout callout-sub fixed">Weekend</h4>
+                        <iframe width="100%" class="carto-db" frameborder="0" src="https://johnmccartin.cartodb.com/viz/b15b6854-99d8-11e5-9c97-0ecfd53eb7d3/embed_map?center_lat=42.3623&center_lon=-71.0862&zoom=15" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+                    </div>
+
+                    
+
+                </div>
+
+            <div class="charts top">
+                <div class="chart-wrap harvard-wrap pure-u-1 border-bottom-1">
+                    <div class="chart" id="harvard-chart">
+                        <div class="chart-legend pull-up pull-right">
+                            <img src="./img/chart-legend.png" />
+                        </div>
+                        <svg></svg>
                     </div>
 
                 </div>
 
+                <div class="chart-wrap kendall-wrap pure-u-1">
+                    <div class="chart" id="kendall-chart">
+                        <div class="chart-legend pull-up pull-right">
+                            <img src="./img/chart-legend.png" />
+                        </div>
+                        <svg></svg>
+                    </div>
+                </div>
+
+                 <div class="chart-explanation absolute pull-right pull-up margin-right-1">
+                        <p>These charts show the total number of Hubway returns to stations local to each square. Returns are weighted so that weekday and weekend rides are counted equally (for comparison purposes).</p>
+                        <p>At Harvard, Hubway returns are dispersed evenly throughout the day, especially on weekdays. On weekends, returns are concentrated in the afternoon.</p>
+                        <p>At Kendall, returns spike during the morning rush hour, then taper off through the day.</p>
+                        <p>We believe the difference is attributed to the differing groups of people who use each square, and the differing land uses which serve them. Harvard has many institutions and serves a student and tourist population, whose commuting patterns do not follow the normal 9-5 rush. Kendall, by contrast, serves offices and office workers, who do follow the classic commute schedule.</p>
+                    </div>
+            </div>
+
+            <div class="legend legend-open top fixed pull-down pull-right margin-bottom-1 margin-right-1">
+                <div class="legend-unreveal pointer pull-right pull-up absolute">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="94.926px" height="94.926px" viewBox="0 0 94.926 94.926" style="enable-background:new 0 0 94.926 94.926;"
+                     xml:space="preserve">
+                    <g>
+                    <path d="M55.931,47.463L94.306,9.09c0.826-0.827,0.826-2.167,0-2.994L88.833,0.62C88.436,0.224,87.896,0,87.335,0
+                        c-0.562,0-1.101,0.224-1.498,0.62L47.463,38.994L9.089,0.62c-0.795-0.795-2.202-0.794-2.995,0L0.622,6.096
+                        c-0.827,0.827-0.827,2.167,0,2.994l38.374,38.373L0.622,85.836c-0.827,0.827-0.827,2.167,0,2.994l5.473,5.476
+                        c0.397,0.396,0.936,0.62,1.498,0.62s1.1-0.224,1.497-0.62l38.374-38.374l38.374,38.374c0.397,0.396,0.937,0.62,1.498,0.62
+                        s1.101-0.224,1.498-0.62l5.473-5.476c0.826-0.827,0.826-2.167,0-2.994L55.931,47.463z"/>
+                    </g>
+                </svg>
+                </div>
+                <img src="./img/legend.png" />
+            </div>
+
             </div><!-- /content -->
 
 
+        
 
+        
 
         </div><!-- /layout -->
 
+
+        <script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
+        <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
     </body>
 </html>
