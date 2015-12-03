@@ -197,7 +197,7 @@ __   ____ _ _ __(_) __ _| |__ | | ___  ___
 }
 
 .brand-title.dark {
-  background: #00a86b;
+  background: purple;
 }
 
 .debug {
@@ -238,7 +238,7 @@ __   ____ _ _ __(_) __ _| |__ | | ___  ___
 
 .pure-menu li a:hover, .pure-menu li a:focus {
   color: #222222;
-  background: #00a86b;
+  background: purple;
 }
 
 .no-margin {
@@ -369,6 +369,10 @@ __   ____ _ _ __(_) __ _| |__ | | ___  ___
   bottom: 0;
 }
 
+.pull-up {
+  top: 0;
+}
+
 .pull-right {
   float: right;
   right: 0;
@@ -413,6 +417,144 @@ __   ____ _ _ __(_) __ _| |__ | | ___  ___
   margin-right: auto;
 }
 
+/* perfect-scrollbar v0.6.7 */
+.ps-container {
+  -ms-touch-action: none;
+  overflow: hidden !important;
+}
+
+.ps-container.ps-active-x > .ps-scrollbar-x-rail, .ps-container.ps-active-y > .ps-scrollbar-y-rail {
+  display: block;
+}
+
+.ps-container.ps-in-scrolling {
+  pointer-events: none;
+}
+
+.ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+
+.ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+  background-color: #999;
+}
+
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  background-color: #999;
+}
+
+.ps-container > .ps-scrollbar-x-rail {
+  display: none;
+  position: absolute;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  -webkit-transition: background-color 0.2s linear,opacity 0.2s linear;
+  -moz-transition: background-color 0.2s linear,opacity 0.2s linear;
+  -o-transition: background-color 0.2s linear,opacity 0.2s linear;
+  transition: background-color 0.2s linear,opacity 0.2s linear;
+  bottom: 3px;
+  height: 8px;
+}
+
+.ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+  position: absolute;
+  background-color: #aaa;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  bottom: 0;
+  height: 8px;
+}
+
+.ps-container > .ps-scrollbar-y-rail {
+  display: none;
+  position: absolute;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  -webkit-transition: background-color 0.2s linear,opacity 0.2s linear;
+  -moz-transition: background-color 0.2s linear,opacity 0.2s linear;
+  -o-transition: background-color 0.2s linear,opacity 0.2s linear;
+  transition: background-color 0.2s linear,opacity 0.2s linear;
+  right: 3px;
+  width: 8px;
+}
+
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  position: absolute;
+  background-color: #aaa;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  right: 0;
+  width: 8px;
+}
+
+.ps-container:hover.ps-in-scrolling {
+  pointer-events: none;
+}
+
+.ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+
+.ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+  background-color: #999;
+}
+
+.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+
+.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  background-color: #999;
+}
+
+.ps-container:hover > .ps-scrollbar-x-rail, .ps-container:hover > .ps-scrollbar-y-rail {
+  opacity: 0.6;
+}
+
+.ps-container:hover > .ps-scrollbar-x-rail:hover {
+  background-color: #eee;
+  opacity: 0.9;
+}
+
+.ps-container:hover > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x {
+  background-color: #999;
+}
+
+.ps-container:hover > .ps-scrollbar-y-rail:hover {
+  background-color: #eee;
+  opacity: 0.9;
+}
+
+.ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y {
+  background-color: #999;
+}
+
 @media screen and (min-width: 48em) {
   .nav-menu {
     background: transparent;
@@ -443,8 +585,24 @@ __   ____ _ _ __(_) __ _| |__ | | ___  ___
   z-index: 99999;
 }
 
+.top-1 {
+  z-index: 99998;
+}
+
+.top-2 {
+  z-index: 99997;
+}
+
 .bottom {
   z-index: -99999;
+}
+
+.bottom-1 {
+  z-index: -99998;
+}
+
+.bottom-2 {
+  z-index: -99997;
 }
 
 * {
@@ -454,23 +612,23 @@ __   ____ _ _ __(_) __ _| |__ | | ___  ___
 html, body {
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   background: white;
 }
 
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "adelle-sans", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 100;
 }
 
 ::selection {
-  background: #00a86b;
+  background: purple;
   color: white;
 }
 
 ::-moz-selection {
-  background: #00a86b;
+  background: purple;
   color: white;
 }
 
@@ -479,11 +637,11 @@ body {
 }
 
 a {
-  color: #00a86b;
+  color: purple;
 }
 
 a:hover {
-  background: #00a86b;
+  background: purple;
   color: white;
 }
 
@@ -510,6 +668,30 @@ a:hover {
   width: 100%;
 }
 
+.header {
+  height: 50px;
+  width: 100%;
+}
+.header .title h1 {
+  margin: -.05em 0 0 0.8em;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.header .title h2 {
+  font-weight: 300;
+  font-size: .8em;
+  margin: -.4em 0 0 1.5em;
+}
+.header .menu h2 {
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0.7em 2em 0 0;
+}
+
+.content {
+  margin-top: 50px;
+}
+
 .inner {
   width: auto;
   padding: 1em;
@@ -521,12 +703,148 @@ a:hover {
   font-size: 1.2em;
 }
 
-.ptitle {
-  margin-top: 0;
-  font-size: 2em;
+.callout {
+  background: black;
+  color: white;
+  font-size: 1.2em;
+  margin: 1em 0 0 1em;
+  font-weight: 300;
 }
 
-.recent-heading {
-  font-size: 1.2em;
-  font-weight: 100;
+.callout-sub {
+  margin: 2.8em 0 0 1.2em;
+  font-size: 1em;
+}
+
+.pure-g {
+  letter-spacing: 0em;
+  text-rendering: optimizespeed;
+  font-family: "adelle-sans", Helvetica, Arial, "Lucida Grande", sans-serif;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
+  -ms-align-content: flex-start;
+  -webkit-align-content: flex-start;
+  align-content: flex-start;
+}
+
+.btn {
+  background: #222222;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  margin-top: .5em;
+}
+.btn svg {
+  width: 50%;
+  position: relative;
+  left: 25%;
+  top: 5px;
+}
+.btn svg path {
+  fill: white;
+  stroke: white;
+}
+
+.question {
+  cursor: poiter;
+  cursor: help;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.charts {
+  position: fixed;
+  top: 50px;
+  left: -100%;
+  width: 100%;
+  transition: left .2s ease-in-out;
+  background: rgba(34, 34, 34, 0.9);
+}
+.charts.chart-open {
+  left: 0;
+}
+.charts .chart-wrap {
+  width: 100%;
+}
+.charts .chart {
+  position: relative;
+  left: -40px;
+}
+.charts .chart svg {
+  fill: none;
+  stroke: white;
+}
+.charts .chart svg path.Total {
+  stroke-width: 2px;
+}
+.charts .chart svg path.Weekday {
+  stroke-dasharray: 2,2;
+}
+.charts .chart svg path.Weekend {
+  stroke-dasharray: 20,10;
+}
+
+.about {
+  position: fixed;
+  background: #222222;
+  color: white;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: top .2s ease-in-out;
+}
+.about.about-open {
+  top: 0;
+}
+.about div.reader {
+  margin: 2em auto;
+  height: 80%;
+  font-size: 1.8em;
+  overflow: auto;
+}
+.about div.reader h1 {
+  font-size: 1.5em;
+}
+
+.legend {
+  width: 30%;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+.legend.legend-open {
+  opacity: 100;
+}
+.legend img {
+  width: 100%;
+}
+.legend .legend-unreveal {
+  width: 24px;
+}
+.legend .legend-unreveal svg {
+  width: 100%;
+  margin: -1.7em .5em 0 0;
+  padding-right: .5em;
+}
+
+.chart-legend {
+  width: 100px;
+  left: 62%;
+  top: 10px;
+  position: absolute;
+}
+
+.chart-explanation {
+  width: 25%;
+  color: white;
+}
+
+#harvard-chart svg {
+  border-bottom: 1px solid white;
 }

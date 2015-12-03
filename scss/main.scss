@@ -84,12 +84,13 @@ __   ____ _ _ __(_) __ _| |__ | | ___  ___
 
 
 
-$font-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-stack: "adelle-sans",Helvetica, Arial, "Lucida Grande", sans-serif;
+$darkest: #000;
 $primary-dark: #222;
 $primary-light: #fff;
 $mid-tone: #666;
 $mid-light: #ddd;
-$highlight: #00A86B; //green!
+$highlight: purple; 
 $base-size: 16px;
 $reader-size: 1.25em;
 $mobile-break: 30em;
@@ -114,6 +115,7 @@ $desktop-break: 81.25em;
 @import 'margin';
 @import 'padding';
 @import 'positioners';
+@import 'ps';
 @import 'queries';
 @import 'text';
 @import 'zs';
@@ -125,7 +127,7 @@ $desktop-break: 81.25em;
 html, body {
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   background: $primary-light;
 }
 
@@ -182,6 +184,37 @@ a:hover {
   }
 }
 
+
+.header {
+  height: 50px;
+  width: 100%;
+  
+  .title {
+    h1{
+      margin:-.05em 0 0 0.8em;
+      font-size: 1.5em;
+      font-weight: 300;
+    }
+    h2 {
+      font-weight: 300;
+      font-size: .8em;
+      margin: -.4em 0 0 1.5em;
+    }
+  }
+  
+  .menu {
+    h2 {
+      font-weight:400;
+      font-size: 1em;
+      margin: 0.7em 2em 0 0;
+    }
+  }
+}
+
+.content {
+  margin-top:50px;
+}
+
 .inner {
   width: auto;
   padding: 1em;
@@ -199,21 +232,165 @@ a:hover {
 
 
 
-.post {
-
-}
-
-.ptitle {
-  margin-top: 0;
-  font-size: 2em;
-}
-
-
-
-
-.recent-heading {
+.callout {
+  background: $darkest;
+  color: $primary-light;
   font-size: 1.2em;
-  font-weight: 100;
+  margin: 1em 0 0 1em;
+  font-weight: 300;
 }
 
+.callout-sub {
+  margin: 2.8em 0 0 1.2em;
+  font-size: 1em;
+}
+
+.pure-g {
+    letter-spacing: 0em;
+    text-rendering: optimizespeed;
+    font-family: $font-stack;
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+    -ms-align-content: flex-start;
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+}
+
+.btn {
+  background: $primary-dark;
+  width: 2em;
+  height: 2em;
+  border-radius:50%;
+  color:white;
+  cursor: pointer;
+  margin-top: .5em;
+
+  svg {
+    width: 50%;
+    position:relative;
+    left: 25%;
+    top: 5px;
+
+    path {
+      fill:$primary-light;
+      stroke:$primary-light;
+    }
+  }
+}
+
+.question {
+  cursor: poiter;
+  cursor: help;
+}
+
+.pointer {
+  cursor:pointer;
+}
+
+.charts {
+  position: fixed;
+  top: 50px;
+  left: -100%;
+  width:100%;
+  transition: left .2s ease-in-out;
+  background: transparentize($primary-dark,.1);
+  &.chart-open{
+    left: 0;
+  }
+
+  .chart-wrap {
+    width: 100%;
+  }
+
+  .chart {
+    position:relative;
+    left: -40px;
+  }
+
+  .chart svg {
+    fill: none;
+    stroke: white;
+
+    path.Total {
+      stroke-width: 2px;
+    }
+
+    path.Weekday {
+      stroke-dasharray: 2,2;
+    }
+
+    path.Weekend {
+      stroke-dasharray: 20,10;
+    }
+  }
+}
+
+.about {
+  position: fixed;
+  background: $primary-dark;
+  color: $primary-light;
+  top:-100%;
+  left:0;
+  width:100%;
+  height:100%;
+  transition: top .2s ease-in-out;
+
+  &.about-open {
+    top: 0;
+  }
+
+  div.reader {
+    margin: 2em auto;
+    height: 80%;
+    font-size: 1.8em;
+    overflow: auto;
+
+    h1{
+      font-size: 1.5em;
+    }
+  }
+}
+
+.legend {
+  width: 30%;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+
+  &.legend-open {
+    opacity: 100;
+  }
+  
+  img {
+    width: 100%;
+  }
+
+  .legend-unreveal {
+    width: 24px;
+    svg {
+      width: 100%;
+      margin: -1.7em .5em 0 0;
+      padding-right: .5em;
+    }
+  }
+
+}
+
+.chart-legend {
+  width: 100px;
+  left: 62%;
+  top: 10px;
+  position: absolute;
+}
+
+.chart-explanation {
+  width: 25%;
+  color: $primary-light;
+
+}
+
+#harvard-chart svg {
+  border-bottom: 1px solid white;
+}
 
